@@ -183,7 +183,7 @@
             - description: 'Property. Identifier format of any NGSI entity'
               format: uri
               type: string
-          description: 'Organization reference where the process is executed.'
+          description: 'Identification of the Organization where the process is being executed.'
           x-ngsi:
             model: https://schema.org/URL
             type: Relationship
