@@ -19,7 +19,7 @@ components:
     Process:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/process.yaml#/process"
     Asset:
-      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/asset.yaml#/asset"
+      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/asset.yaml#/asset"
     Node:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/node.yaml#/node"
     Worker:
