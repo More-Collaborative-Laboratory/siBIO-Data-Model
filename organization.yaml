@@ -251,7 +251,7 @@ organization:
           title: 'GeoJSON MultiPolygon'
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
 
                 
   required:
