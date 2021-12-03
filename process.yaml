@@ -7,7 +7,7 @@
           description: Process identifier
           type: string
           format: uri
-          example: urn:process:organization:processNBR
+          example: urn:ngsi-ld:Process:c56f6a6b-f748-44c2-b053-16d992b8e276
           x-ngsi:
             type: Property
             
