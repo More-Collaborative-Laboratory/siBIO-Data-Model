@@ -26,7 +26,7 @@
           x-ngsi:
             type: Property
 
-        description: 
+        details: 
           description: Asset description
           type: string
           x-ngsi:
