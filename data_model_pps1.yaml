@@ -23,7 +23,7 @@ components:
     Node:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/node.yaml#/node"
     Worker:
-      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/worker.yaml#/worker"
+      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/worker.yaml#/worker"
 
 paths:
   /ngsi-ld/v1/entities:
