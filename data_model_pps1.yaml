@@ -14,6 +14,8 @@ info:
   
 components:
   schemas: 
+    Organization:
+      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/organiation.yaml#/organization"
     Process:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/process.yaml#/process"
     Asset:
