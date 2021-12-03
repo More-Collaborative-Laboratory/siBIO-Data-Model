@@ -26,6 +26,12 @@
           x-ngsi:
             type: Property
 
+        description: 
+          description: Asset description
+          type: string
+          x-ngsi:
+            type: Property
+
         location:
           description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
           oneOf:
@@ -179,7 +185,7 @@
               type: object
           x-ngsi:
             type: GeoProperty
-            
+
         usedIn:
           anyOf:
             - description: 'Property. Identifier format of any NGSI entity'
