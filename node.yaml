@@ -36,7 +36,7 @@ measurementNode:
                 - description: 'Property. Identifier format of any NGSI entity'
                   format: uri
                   type: string
-            description: 'Identification of the Organization where the process is being executed.'
+            description: 'Identification of the Worker currently operating the Measurement Node.'
             x-ngsi:
                 model: https://schema.org/URL
                 type: Relationship
