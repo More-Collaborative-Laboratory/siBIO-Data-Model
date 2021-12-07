@@ -7,7 +7,7 @@ sensor:
       description: Sensor identifier
       type: string
       format: uri
-      example: urn:ngsi-ld:Sensor:[sensorNbr]
+      example: urn:ngsi-ld:Sensor:[uuid]
       x-ngsi:
         type: Property    
     energyConsumption:

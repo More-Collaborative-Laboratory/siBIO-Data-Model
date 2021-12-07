@@ -7,7 +7,7 @@ organization:
       description: Organization Identifier
       type: string
       format: uri
-      example: urn:ngsi-ld:Organization:0b3f30b7-8b51-4e2c-879c-3281c8e76822
+      example: urn:ngsi-ld:Organization:[taxId]
       x-ngsi:
         type: Property
         
@@ -19,7 +19,7 @@ organization:
         model: https://schema.org/legalName
         type: Property
         
-    taxID:
+    taxId:
       description: The organization's tax number
       type: string
       pattern: '^\d{9}$'
@@ -28,7 +28,7 @@ organization:
         model: https://schema.org/taxID
         type: Property
         
-    ssnID:
+    ssnId:
       description: The organization's social security number
       type: string
       pattern: '^\d{11}$'
