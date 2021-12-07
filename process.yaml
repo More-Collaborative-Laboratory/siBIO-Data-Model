@@ -192,6 +192,8 @@
               type: string
           description: 'Identification of the Organization where the process is being executed.'
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/executedAt"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/URL
             type: Relationship
 
