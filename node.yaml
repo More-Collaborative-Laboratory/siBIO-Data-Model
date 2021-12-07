@@ -1,4 +1,4 @@
-node:
+measurementNode:
     title: MeasurementNode
     type: object
     description: Describes a given node within an asset
