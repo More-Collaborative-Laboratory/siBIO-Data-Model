@@ -30,6 +30,7 @@
           description: Asset description
           type: string
           x-ngsi:
+            model: https://schema.org/text
             type: Property
 
         location:

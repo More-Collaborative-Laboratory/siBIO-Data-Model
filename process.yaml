@@ -23,7 +23,7 @@
           description: Process details/characteristics
           type: string
           x-ngsi:
-            model: https://schema.org/tame
+            model: https://schema.org/text
             type: Property
             
         location:

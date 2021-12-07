@@ -11,6 +11,21 @@ measurementNode:
             x-ngsi:
                 type: Property
 
+        name: 
+          description: Process designation
+          type: string
+          example: Bottling station
+          x-ngsi:
+            model: https://schema.org/name
+            type: Property
+            
+        details: 
+          description: Process details/characteristics
+          type: string
+          x-ngsi:
+            model: https://schema.org/text
+            type: Property
+
         category: 
             description: Define node category
                 * `Automatic` - Measures delivered automatically by an IoT device
@@ -58,7 +73,7 @@ measurementNode:
                   type: object
                   title: Software
                   properties:
-                      OS:
+                      os:
                           description: Describe the operating system installed on the device
                                     * `Baremetal` - No operating system or custom-made OS
                                     * `freeRTOS` - Measures introduced by a human operator
@@ -75,7 +90,7 @@ measurementNode:
                           example: Baremetal
                           x-ngsi:
                             type: Property
-                      Firmware:
+                      firmware:
                           description: Firmware version.
                           type: string
                           example: 1.0.0
@@ -87,20 +102,20 @@ measurementNode:
                   type: object
                   title: Hardware
                   properties:
-                      CPU:
+                      cpu:
                           description: Describe the CPU installed on the device
                           type: string
                           example: ARM Cortex M4
                           x-ngsi:
                               type: Property
 
-                      GNSS:
+                      gnss:
                           description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
                           type: boolean
                           example: true
                           x-ngsi:
                               type: Property                          
-                      RFID:
+                      rfid:
                           description: Indicates the existence of absence of an RFID identification tag. 
                           type: boolean
                           example: false
@@ -131,7 +146,7 @@ measurementNode:
                                   items: {}
                                   example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
                                   x-ngsi:
-                                      units: DBM   
+                                      units: DBM
                                       type: Property                                  
                       powerSupply:
                           description: Describes the types of power supply availble on a given device.
@@ -232,13 +247,7 @@ measurementNode:
                                   example: false
                                   x-ngsi:
                                       type: Property                                      
-              sensors:
-                      description: Enumerate the sensors attached to the IoT device.
-                      type: array
-                      items: 
-                            $ref: https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/sensors.yaml#/sensors
-                      example: [energyConsumption,waterConsumption]
-                      
+
         location:
           description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
           oneOf:
