@@ -21,7 +21,7 @@ components:
     Asset:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/asset.yaml#/asset"
     MeasurementNode:
-      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/asset.yaml#/measurementNode"
+      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/node.yaml#/measurementNode"
     Worker:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/worker.yaml#/worker"
 
