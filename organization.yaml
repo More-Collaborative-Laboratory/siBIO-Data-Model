@@ -36,7 +36,7 @@ organization:
       x-ngsi:
         type: Property
         
-    caeID:
+    caeId:
       description: The organization's economic activity code
       type: string
       pattern: '^\d{5}$'
@@ -257,6 +257,6 @@ organization:
   required:
     - id
     - legalName
-    - taxID
-    - ssnID
+    - taxId
+    - ssnId
     - email
