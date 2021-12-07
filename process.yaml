@@ -19,6 +19,13 @@
             model: https://schema.org/name
             type: Property
             
+        details: 
+          description: Process details/chracteristics
+          type: string
+          x-ngsi:
+            model: https://schema.org/tame
+            type: Property
+            
         location:
           description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
           oneOf:
