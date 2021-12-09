@@ -46,11 +46,23 @@
                 type: number
               minItems: 2
               type: array
+<<<<<<< HEAD
             required:
               - type
               - coordinates
             title: 'GeoJSON Point'
             type: object
+=======
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+>>>>>>> my-temporary-work
           x-ngsi:
             uri: "https://uri.etsi.org/ngsi-ld/location"
             uri-prefix: "https://uri.etsi.org/ngsi-ld/"
