@@ -68,6 +68,9 @@ measurementNode:
             description: IoT device description
             type: object
             title: IoT
+            x-ngsi:
+              uri: "https://projetobioma.pt/dataModel/automatic"
+              uri-prefix: "https://projetobioma.pt/dataModel/"
             properties:
               name:
                 description: The IoT's device name
@@ -115,6 +118,9 @@ measurementNode:
               hardware:
                   description: Describes the device's hardware layer.
                   type: object
+                  x-ngsi:
+                    uri: "https://projetobioma.pt/dataModel/hardware"
+                    uri-prefix: "https://projetobioma.pt/dataModel/"
                   title: Hardware
                   properties:
                       cpu:
@@ -176,6 +182,9 @@ measurementNode:
                       powerSupply:
                           description: Describes the types of power supply availble on a given device.
                           type: object
+                          x-ngsi:
+                            uri: "https://projetobioma.pt/dataModel/powerSupply"
+                            uri-prefix: "https://projetobioma.pt/dataModel/"
                           title: Power supply
                           properties:
                               battery:
