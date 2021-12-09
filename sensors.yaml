@@ -27,7 +27,7 @@ sensor:
     dateObserved:
       description: The date and time of this observation as defined by RFC 3339.
       type: string
-      format: date-time
+      format: DateTime
       x-ngsi:
           model: https://schema.org/DateTime
           type: Property
