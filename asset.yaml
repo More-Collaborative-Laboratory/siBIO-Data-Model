@@ -16,6 +16,8 @@
           type: string
           example: 99-89-SO
           x-ngsi:
+            uri: "https://schema.org/name"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/name
             type: Property
 
@@ -24,12 +26,16 @@
           type: string
           example: Transportation Vehicle
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/category"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             type: Property
 
         details: 
           description: Asset description
           type: string
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/details"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/text
             type: Property
 
@@ -201,6 +207,8 @@
               type: string
           description: 'Identification of the Process where the Asset in being used in.'
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/usedIn"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/URL
             type: Relationship
        
