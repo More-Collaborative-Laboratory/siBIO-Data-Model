@@ -400,6 +400,8 @@ measurementNode:
               title: 'GeoJSON MultiPolygon'
               type: object
           x-ngsi:
+            uri: "https://uri.etsi.org/ngsi-ld/location"
+            uri-prefix: "https://uri.etsi.org/ngsi-ld/"
             type: GeoProperty
 
     required:
