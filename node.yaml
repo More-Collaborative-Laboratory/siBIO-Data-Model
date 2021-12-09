@@ -16,6 +16,7 @@ measurementNode:
           type: string
           example: Bottling station
           x-ngsi:
+            uri: "https://schema.org/name"
             uri-prefix: "https://schema.org/"
             model: https://schema.org/name
             type: Property

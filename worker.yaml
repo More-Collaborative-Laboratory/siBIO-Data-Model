@@ -11,11 +11,13 @@
           x-ngsi:
             type: Property
             
-        name: 
+        givenName: 
           description: Worker first name
           type: string
           example: John
           x-ngsi:
+            uri: "https://schema.org/givenName"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/Person
             type: Property
             
@@ -24,6 +26,8 @@
           type: string
           example: Smith
           x-ngsi:
+            uri: "https://schema.org/familyName"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/Person
             type: Property
             
@@ -33,6 +37,8 @@
           pattern: '^\d{9}$'
           example: 254545879
           x-ngsi:
+            uri: "https://schema.org/taxID"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/Person
             type: Property
         
@@ -42,6 +48,8 @@
           pattern: '^\d{11}$'
           example: 254545879
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/ssnId"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/Person
             type: Property
         
@@ -50,6 +58,8 @@
           type: string
           example: Driver
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/functionPerformed"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             type: Property       
 
         worksAt:
@@ -64,6 +74,8 @@
               type: string
           description: 'Identification of the Organization where the Worker is currently employed.'
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/worksAt"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/URL
             type: Relationship
 

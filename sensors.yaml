@@ -15,6 +15,8 @@ sensor:
       minimum: 0
       type: number
       x-ngsi:
+        uri: "https://projetobioma.pt/dataModel/energyConsumption"
+        uri-prefix: "https://projetobioma.pt/dataModel/"
         type: Property
         units: KWH
     waterConsumption:
@@ -22,6 +24,8 @@ sensor:
       minimum: 0
       type: number
       x-ngsi:
+        uri: "https://projetobioma.pt/dataModel/waterConsumption"
+        uri-prefix: "https://projetobioma.pt/dataModel/"
         type: Property
         units: MTQ
     dateObserved:
@@ -29,6 +33,8 @@ sensor:
       type: string
       format: DateTime
       x-ngsi:
+          uri: "https://projetobioma.pt/dataModel/dateObserved"
+          uri-prefix: "https://projetobioma.pt/dataModel/"
           model: https://schema.org/DateTime
           type: Property
   required:
