@@ -23,6 +23,8 @@ measurementNode:
           description: Process details/characteristics
           type: string
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/details"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/text
             type: Property
 
@@ -38,6 +40,8 @@ measurementNode:
                 - Both
             example: Automatic
             x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/category"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
                 model: https://schema.org/category
                 type: Property
 
@@ -53,6 +57,8 @@ measurementNode:
                   type: string
             description: 'Identification of the Worker currently operating the Measurement Node.'
             x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/operatedBy"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
                 model: https://schema.org/URL
                 type: Relationship
 
@@ -89,13 +95,20 @@ measurementNode:
                               - Other
                           example: Baremetal
                           x-ngsi:
+                            uri: "https://projetobioma.pt/dataModel/os"
+                            uri-prefix: "https://projetobioma.pt/dataModel/"
                             type: Property
                       firmware:
                           description: Firmware version.
                           type: string
                           example: 1.0.0
                           x-ngsi:
-                            type: Property                          
+                            uri: "https://projetobioma.pt/dataModel/firmware"
+                            uri-prefix: "https://projetobioma.pt/dataModel/"
+                            type: Property
+                  x-ngsi:          
+                    uri: "https://projetobioma.pt/dataModel/software"
+                    uri-prefix: "https://projetobioma.pt/dataModel/"
                                 
               hardware:
                   description: Describes the device's hardware layer.
@@ -107,6 +120,8 @@ measurementNode:
                           type: string
                           example: ARM Cortex M4
                           x-ngsi:
+                              uri: "https://projetobioma.pt/dataModel/cpu"
+                              uri-prefix: "https://projetobioma.pt/dataModel/"
                               type: Property
 
                       gnss:
@@ -114,12 +129,16 @@ measurementNode:
                           type: boolean
                           example: true
                           x-ngsi:
+                              uri: "https://projetobioma.pt/dataModel/gnss"
+                              uri-prefix: "https://projetobioma.pt/dataModel/"
                               type: Property                          
                       rfid:
                           description: Indicates the existence of absence of an RFID identification tag. 
                           type: boolean
                           example: false
                           x-ngsi:
+                              uri: "https://projetobioma.pt/dataModel/rfid"
+                              uri-prefix: "https://projetobioma.pt/dataModel/"
                               type: Property                      
                       connectivity:
                           description: Data communication capability of the device.
@@ -139,6 +158,8 @@ measurementNode:
                                   items: {}
                                   example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
                                   x-ngsi:
+                                      uri: "https://projetobioma.pt/dataModel/transceivers"
+                                      uri-prefix: "https://projetobioma.pt/dataModel/"
                                       type: Property                                  
                               rssi:
                                   description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
@@ -146,6 +167,8 @@ measurementNode:
                                   items: {}
                                   example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
                                   x-ngsi:
+                                      uri: "https://projetobioma.pt/dataModel/rssi"
+                                      uri-prefix: "https://projetobioma.pt/dataModel/"
                                       units: DBM
                                       type: Property                                  
                       powerSupply:
@@ -163,7 +186,9 @@ measurementNode:
                                           type: boolean
                                           example: true
                                           x-ngsi:
-                                              type: Property                                               
+                                            uri: "https://projetobioma.pt/dataModel/available"
+                                            uri-prefix: "https://projetobioma.pt/dataModel/"
+                                            type: Property                                               
                                       level:
                                           description: Indicate the battery charge level (if applicable) [0-100%].
                                           type: integer
@@ -171,6 +196,8 @@ measurementNode:
                                           maximum: 100
                                           example: 85
                                           x-ngsi:
+                                            uri: "https://projetobioma.pt/dataModel/level"
+                                            uri-prefix: "https://projetobioma.pt/dataModel/"
                                             units: P1
                                             type: Property
                                       details:
@@ -192,13 +219,17 @@ measurementNode:
                                                       - Other
                                                   example: LiPo
                                                   x-ngsi:
-                                                      type: Property                                                       
+                                                    uri: "https://projetobioma.pt/dataModel/technology"
+                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
+                                                    type: Property                                                       
                                               charge:
                                                   description: Battery charge value expressed in mAh. In the case of battery packs, this is the charge sum of all batteries in the pack.
                                                   type: integer
                                                   minimum: 0
                                                   example: 2300
                                                   x-ngsi:
+                                                      uri: "https://projetobioma.pt/dataModel/charge"
+                                                      uri-prefix: "https://projetobioma.pt/dataModel/"
                                                       units: E09
                                                       type: Property                                                       
                               solar:
@@ -211,6 +242,8 @@ measurementNode:
                                           type: boolean
                                           example: true
                                           x-ngsi:
+                                              uri: "https://projetobioma.pt/dataModel/available"
+                                              uri-prefix: "https://projetobioma.pt/dataModel/"
                                               type: Property                                             
                                       details:
                                           description: Details on the installed solar panels
@@ -226,6 +259,8 @@ measurementNode:
                                                     - Other
                                                 example: Polycrystalline
                                                 x-ngsi:
+                                                    uri: "https://projetobioma.pt/dataModel/technology"
+                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
                                                     type: Property                                                   
                                               power:
                                                 description: Total installed power in watts.
@@ -233,6 +268,8 @@ measurementNode:
                                                 minimum: 0
                                                 example: 10
                                                 x-ngsi:
+                                                    uri: "https://projetobioma.pt/dataModel/power"
+                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
                                                     units: WTT
                                                     type: Property                                                   
                               poe:
@@ -240,12 +277,16 @@ measurementNode:
                                   type: boolean
                                   example: false
                                   x-ngsi:
+                                      uri: "https://projetobioma.pt/dataModel/poe"
+                                      uri-prefix: "https://projetobioma.pt/dataModel/"
                                       type: Property                                      
                               mains:
                                   description: Device supplied by mains voltage?
                                   type: boolean
                                   example: false
                                   x-ngsi:
+                                      uri: "https://projetobioma.pt/dataModel/mains"
+                                      uri-prefix: "https://projetobioma.pt/dataModel/"
                                       type: Property                                      
 
         location:
