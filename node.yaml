@@ -250,6 +250,7 @@ measurementNode:
 
         location:
           description: 'Geoproperty. Geojson reference to the item. Point'
+          type: object
           properties:
             bbox:
               items:
