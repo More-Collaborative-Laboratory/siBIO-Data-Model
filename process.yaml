@@ -16,6 +16,8 @@
           type: string
           example: Bottling station
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/name"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/name
             type: Property
             
@@ -23,6 +25,8 @@
           description: Process details/characteristics
           type: string
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/details"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             model: https://schema.org/text
             type: Property
             
@@ -178,6 +182,8 @@
               title: 'GeoJSON MultiPolygon'
               type: object
           x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/name"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
             type: GeoProperty
 
         executedAt:
