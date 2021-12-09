@@ -24,6 +24,8 @@ components:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/node.yaml#/measurementNode"
     Worker:
       $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/worker.yaml#/worker"
+    Sensor:
+      $ref: "https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/sensors.yaml#/sensor"
 
 paths:
   /ngsi-ld/v1/entities:
