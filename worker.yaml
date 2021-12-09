@@ -84,4 +84,4 @@
 
       required:
         - id
-        - name
+        - givenName
