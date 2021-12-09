@@ -27,8 +27,8 @@ organization:
       pattern: '^\d{9}$'
       example: 600012345
       x-ngsi:
-        uri: "https://projetobioma.pt/dataModel/taxId"
-        uri-prefix: "https://projetobioma.pt/dataModel/"
+        uri: "https://schema.org/taxID"
+        uri-prefix: "https://schema.org/"
         model: https://schema.org/taxID
         type: Property
         
@@ -62,8 +62,8 @@ organization:
           type: string         
           example: Rua de São Bento
           x-ngsi:
-            uri: "https://projetobioma.pt/dataModel/streetAddress"
-            uri-prefix: "https://projetobioma.pt/dataModel/"
+            uri: "https://schema.org/streetAddress"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/streetAddress
             type: Property
         postalCode:
@@ -71,8 +71,8 @@ organization:
           type: string
           example: 1249-068
           x-ngsi:
-            uri: "https://projetobioma.pt/dataModel/postalCode"
-            uri-prefix: "https://projetobioma.pt/dataModel/"
+            uri: "https://schema.org/postalCode"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/postalCode
             type: Property              
         addressLocality:
@@ -80,8 +80,8 @@ organization:
           type: string
           example: Lisboa
           x-ngsi:
-            uri: "https://projetobioma.pt/dataModel/addressLocality"
-            uri-prefix: "https://projetobioma.pt/dataModel/"
+            uri: "https://schema.org/addressLocality"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/addressLocality
             type: Property             
         addressCountry:
@@ -89,13 +89,13 @@ organization:
           type: string
           example: Portugal
           x-ngsi:
-            uri: "https://projetobioma.pt/dataModel/addressCountry"
-            uri-prefix: "https://projetobioma.pt/dataModel/"
+            uri: "https://schema.org/addressCountry"
+            uri-prefix: "https://schema.org/"
             model: https://schema.org/addressCountry
             type: Property
       x-ngsi:
-        uri: "https://projetobioma.pt/dataModel/address"
-        uri-prefix: "https://projetobioma.pt/dataModel/"
+        uri: "https://schema.org/address"
+        uri-prefix: "https://schema.org/"
         model: https://schema.org/address
         type: Property
         
@@ -105,8 +105,8 @@ organization:
       format: email
       example: 11CAEOT@ar.parlamento.pt
       x-ngsi:
-        uri: "https://projetobioma.pt/dataModel/email"
-        uri-prefix: "https://projetobioma.pt/dataModel/"
+        uri: "https://schema.org/email"
+        uri-prefix: "https://schema.org/"
         model: https://schema.org/email
         type: Property
                     
@@ -116,8 +116,8 @@ organization:
       pattern: '^\d{9,18}$'
       example: 213919596
       x-ngsi:
-        uri: "https://projetobioma.pt/dataModel/telephone"
-        uri-prefix: "https://projetobioma.pt/dataModel/"
+        uri: "https://schema.org/telephone"
+        uri-prefix: "https://schema.org/"
         model: https://schema.org/telephone
         type: Property
     
