@@ -1,5 +1,5 @@
     asset:
-      title: Assete
+      title: Asset
       type: object
       description: Describes an asset within a process
       properties:
