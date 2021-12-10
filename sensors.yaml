@@ -28,14 +28,5 @@ sensor:
         uri-prefix: "https://projetobioma.pt/dataModel/"
         type: Property
         units: MTQ
-    dateObserved:
-      description: The date and time of this observation as defined by RFC 3339.
-      type: string
-      format: DateTime
-      x-ngsi:
-          uri: "https://projetobioma.pt/dataModel/dateObserved"
-          uri-prefix: "https://projetobioma.pt/dataModel/"
-          model: https://schema.org/DateTime
-          type: Property
   required:
     - id
