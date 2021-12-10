@@ -81,243 +81,71 @@ measurementNode:
                 model: https://schema.org/URL
                 type: Relationship
 
-        automatic:
-            description: IoT device description
-            type: object
-            title: IoT
-            x-ngsi:
-              uri: "https://projetobioma.pt/dataModel/automatic"
-              uri-prefix: "https://projetobioma.pt/dataModel/"
-            properties:
-              name:
-                description: The IoT's device name
-                type: string         
-                example: XPTO
-                x-ngsi:
-                    uri: "https://schema.org/name"
-                    uri-prefix: "https://schema.org/"
-                    model: https://schema.org/name
-                    type: Property
-              software:
-                  description: Describes the device's software layer.
-                  type: object
-                  title: Software
-                  properties:
-                      os:
-                          description: Describe the operating system installed on the device
-                                    * `Baremetal` - No operating system or custom-made OS
-                                    * `freeRTOS` - Measures introduced by a human operator
-                                    * `Linux` - Raspberry Pi OS, Ubuntu, etc.
-                                    * `Zephyr`- Linux based real-time OS
-                                    * `Other` - Other OS
-                          type: string
-                          enum:
-                              - Baremetal
-                              - FreeRTOS
-                              - Linux
-                              - Zephyr
-                              - Other
-                          example: Baremetal
-                          x-ngsi:
-                            uri: "https://projetobioma.pt/dataModel/os"
-                            uri-prefix: "https://projetobioma.pt/dataModel/"
-                            type: Property
-                      firmware:
-                          description: Firmware version.
-                          type: string
-                          example: 1.0.0
-                          x-ngsi:
-                            uri: "https://projetobioma.pt/dataModel/firmware"
-                            uri-prefix: "https://projetobioma.pt/dataModel/"
-                            type: Property
-                  x-ngsi:          
-                    uri: "https://projetobioma.pt/dataModel/software"
-                    uri-prefix: "https://projetobioma.pt/dataModel/"
-                                
-              hardware:
-                  description: Describes the device's hardware layer.
-                  type: object
-                  x-ngsi:
-                    uri: "https://projetobioma.pt/dataModel/hardware"
-                    uri-prefix: "https://projetobioma.pt/dataModel/"
-                  title: Hardware
-                  properties:
-                      cpu:
-                          description: Describe the CPU installed on the device
-                          type: string
-                          example: ARM Cortex M4
-                          x-ngsi:
-                              uri: "https://projetobioma.pt/dataModel/cpu"
-                              uri-prefix: "https://projetobioma.pt/dataModel/"
-                              type: Property
+        software: 
+          description: Describes the device's software layer.
+          type: string
+          example: Baremetal
+          x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/software"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
+            type: Property
+            
+        firmware: 
+          description: Firmware version.
+          type: string
+          example: '1.0.0'
+          x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/firmware"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
+            type: Property
 
-                      gnss:
-                          description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
-                          type: boolean
-                          example: true
-                          x-ngsi:
-                              uri: "https://projetobioma.pt/dataModel/gnss"
-                              uri-prefix: "https://projetobioma.pt/dataModel/"
-                              type: Property                          
-                      rfid:
-                          description: Indicates the existence of absence of an RFID identification tag. 
-                          type: boolean
-                          example: false
-                          x-ngsi:
-                              uri: "https://projetobioma.pt/dataModel/rfid"
-                              uri-prefix: "https://projetobioma.pt/dataModel/"
-                              type: Property                      
-                      connectivity:
-                          description: Data communication capability of the device.
-                          title: connectivity
-                          type: object
-                          properties:
-                              transceivers:
-                                  description: Describe the network connectivity transceivers available on the device
-                                            * `None` - No wired or wireless connectivity available
-                                            * `Wifi` - Wifi available
-                                            * `Bluetooth` - Bluetooth availble
-                                            * `Ethernet` - Wired network connection
-                                            * `GSM/GPRS` - GSM or 2G data transfer system available
-                                            * `NFC` - Near-field communication
-                                            * `LPWAN` - Can be any of the availble low power wide area network such as NB-IoT, LoRa, SigFox, etc.
-                                  type: array
-                                  items: {}
-                                  example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
-                                  x-ngsi:
-                                      uri: "https://projetobioma.pt/dataModel/transceivers"
-                                      uri-prefix: "https://projetobioma.pt/dataModel/"
-                                      type: Property                                  
-                              rssi:
-                                  description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
-                                  type: array
-                                  items: {}
-                                  example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
-                                  x-ngsi:
-                                      uri: "https://projetobioma.pt/dataModel/rssi"
-                                      uri-prefix: "https://projetobioma.pt/dataModel/"
-                                      units: DBM
-                                      type: Property                                  
-                      powerSupply:
-                          description: Describes the types of power supply availble on a given device.
-                          type: object
-                          x-ngsi:
-                            uri: "https://projetobioma.pt/dataModel/powerSupply"
-                            uri-prefix: "https://projetobioma.pt/dataModel/"
-                          title: Power supply
-                          properties:
-                              battery:
-                                  description: Indicate if the device is battery operated and, if so, the electric characteristics of the batteries.
-                                  type: object
-                                  title: Battery
-                                  properties:
-                                      available:
-                                          description: Indicate if the device is powered by battery or not.
-                                          type: boolean
-                                          example: true
-                                          x-ngsi:
-                                            uri: "https://projetobioma.pt/dataModel/available"
-                                            uri-prefix: "https://projetobioma.pt/dataModel/"
-                                            type: Property                                               
-                                      level:
-                                          description: Indicate the battery charge level (if applicable) [0-100%].
-                                          type: integer
-                                          minimum: 0
-                                          maximum: 100
-                                          example: 85
-                                          x-ngsi:
-                                            uri: "https://projetobioma.pt/dataModel/level"
-                                            uri-prefix: "https://projetobioma.pt/dataModel/"
-                                            units: P1
-                                            type: Property
-                                      details:
-                                          description: Details on the eventual installed batteries
-                                          type: object
-                                          title: Battery details
-                                          properties:
-                                              technology:
-                                                  description: Type of battery tecnology.
-                                                  type: string
-                                                  enum:
-                                                      - LiPo
-                                                      - LiIon
-                                                      - LiFePO
-                                                      - NiCd
-                                                      - NiMH
-                                                      - Lead-Acid
-                                                      - Non-recheargeable
-                                                      - Other
-                                                  example: LiPo
-                                                  x-ngsi:
-                                                    uri: "https://projetobioma.pt/dataModel/technology"
-                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
-                                                    type: Property                                                       
-                                              charge:
-                                                  description: Battery charge value expressed in mAh. In the case of battery packs, this is the charge sum of all batteries in the pack.
-                                                  type: integer
-                                                  minimum: 0
-                                                  example: 2300
-                                                  x-ngsi:
-                                                      uri: "https://projetobioma.pt/dataModel/charge"
-                                                      uri-prefix: "https://projetobioma.pt/dataModel/"
-                                                      units: E09
-                                                      type: Property                                                       
-                              solar:
-                                  description: If present, describe the details of the solar panel structure installed to supply or recharge the device's batteries.
-                                  type: object
-                                  title: Solar panels
-                                  properties:
-                                      available:
-                                          description: Indicate if solar panels are available .
-                                          type: boolean
-                                          example: true
-                                          x-ngsi:
-                                              uri: "https://projetobioma.pt/dataModel/available"
-                                              uri-prefix: "https://projetobioma.pt/dataModel/"
-                                              type: Property                                             
-                                      details:
-                                          description: Details on the installed solar panels
-                                          type: object
-                                          title: Solar panel details
-                                          properties:
-                                              technology:
-                                                description: Type of solar panel tecnology.
-                                                type: string
-                                                enum:
-                                                   - Monocrystalline
-                                                    - Polycrystalline
-                                                    - Other
-                                                example: Polycrystalline
-                                                x-ngsi:
-                                                    uri: "https://projetobioma.pt/dataModel/technology"
-                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
-                                                    type: Property                                                   
-                                              power:
-                                                description: Total installed power in watts.
-                                                type: integer
-                                                minimum: 0
-                                                example: 10
-                                                x-ngsi:
-                                                    uri: "https://projetobioma.pt/dataModel/power"
-                                                    uri-prefix: "https://projetobioma.pt/dataModel/"
-                                                    units: WTT
-                                                    type: Property                                                   
-                              poe:
-                                  description: Device supplied by power-over-ethernet?
-                                  type: boolean
-                                  example: false
-                                  x-ngsi:
-                                      uri: "https://projetobioma.pt/dataModel/poe"
-                                      uri-prefix: "https://projetobioma.pt/dataModel/"
-                                      type: Property                                      
-                              mains:
-                                  description: Device supplied by mains voltage?
-                                  type: boolean
-                                  example: false
-                                  x-ngsi:
-                                      uri: "https://projetobioma.pt/dataModel/mains"
-                                      uri-prefix: "https://projetobioma.pt/dataModel/"
-                                      type: Property                                      
+        cpu:
+            description: Describe the CPU installed on the device
+            type: string
+            example: ARM Cortex M4
+            x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/cpu"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
+                type: Property
+
+        gnss:
+            description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
+            type: boolean
+            example: true
+            x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/gnss"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
+                type: Property                          
+        rfid:
+            description: Indicates the existence of absence of an RFID identification tag. 
+            type: boolean
+            example: false
+            x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/rfid"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
+                type: Property                      
+
+        connectivity:
+            description: Data communication capability of the device.
+            type: array
+            items: {}
+            example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
+            x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/connectivity"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
+                units: DBM
+                type: Property                                  
+
+        rssi:
+            description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
+            type: array
+            items: {}
+            #example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
+            x-ngsi:
+                uri: "https://projetobioma.pt/dataModel/rssi"
+                uri-prefix: "https://projetobioma.pt/dataModel/"
+                units: DBM
+                type: Property                                  
 
         location:
           description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
