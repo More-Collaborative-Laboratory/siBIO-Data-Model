@@ -1,0 +1,59 @@
+sensor:
+  title: Sensor
+  type: object
+  description: Sensor's description and physical variables
+  properties:
+    id:
+      description: Sensor identifier
+      type: string
+      format: uri
+      example: urn:ngsi-ld:Sensor:[uuid]
+      x-ngsi:
+        type: Property    
+
+
+
+    measurementVariable: 
+        description: Define variable sensor can measure
+            * `Water` - Water consumption measurement. Unit MTQ.
+            * `Energy` - Energy consumption measurement. Unit KWH.
+        type: string
+        enum: 
+            - Water
+            - Energy
+        example: Energy
+        x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/category"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
+            model: https://schema.org/category
+            type: Property
+
+    measurementValue:
+      description: Measurement variable quantity consumed by a given asset, within a process
+      minimum: 0
+      type: number
+      x-ngsi:
+        uri: "https://projetobioma.pt/dataModel/measurementValue"
+        uri-prefix: "https://projetobioma.pt/dataModel/"
+        type: Property
+        units: MTQ [water], KWH [energy]
+
+    belongsTo:
+        anyOf:
+            - description: 'Relationship property: Identifier format of any NGSI entity'
+              maxLength: 256
+              minLength: 1
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+              type: string
+            - description: 'Relationship property: Identifier format of any NGSI entity'
+              format: uri
+              type: string
+        description: 'Identification of the Measurement node the sensor is connected to.'
+        x-ngsi:
+            uri: "https://projetobioma.pt/dataModel/belongsTo"
+            uri-prefix: "https://projetobioma.pt/dataModel/"
+            model: https://schema.org/URL
+            type: Relationship
+
+  required:
+    - id
