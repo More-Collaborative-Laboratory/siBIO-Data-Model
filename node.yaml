@@ -30,8 +30,8 @@ measurementNode:
             model: https://schema.org/text
             type: Property
 
-        category: 
-            description: Define node category
+        dataCategory: 
+            description: Define node data reading category
                 * `Automatic` - Measures delivered automatically by an IoT device
                 * `Manual` - Measures introduced by a human operator
                 * `Both` - This node have measures that are introduced by an IoT device and a human
@@ -42,7 +42,7 @@ measurementNode:
                 - Both
             example: Automatic
             x-ngsi:
-                uri: "https://projetobioma.pt/dataModel/category"
+                uri: "https://projetobioma.pt/dataModel/dataCategory"
                 uri-prefix: "https://projetobioma.pt/dataModel/"
                 model: https://schema.org/category
                 type: Property
