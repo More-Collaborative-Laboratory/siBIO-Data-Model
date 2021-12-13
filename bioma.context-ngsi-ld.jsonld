@@ -3,7 +3,7 @@
         "type": "@type",
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "fiware": "https://projetobioma.pt/dataModel/",
+        "bioma": "https://projetobioma.pt/dataModel/",
         "schema": "https://schema.org/",
         "Asset": "bioma:Asset",
         "MeasurementNode": "bioma:MeasurementNode",
