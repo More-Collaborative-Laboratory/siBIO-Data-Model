@@ -19,7 +19,7 @@
         "category": "bioma:category",
         "connectivity": "bioma:connectivity",
         "cpu": "bioma:cpu",
-        "deployedAt": "bioma:operatedBy",
+        "deployedAt": "bioma:deployedAt",
         "details": "bioma:details",
         "email": "schema:email",
         "executedAt": "bioma:executedAt",

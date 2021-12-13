@@ -76,7 +76,7 @@ measurementNode:
                   type: string
             description: 'Identification of the Asset in which the Measurement Node is deployed.'
             x-ngsi:
-                uri: "https://projetobioma.pt/dataModel/operatedBy"
+                uri: "https://projetobioma.pt/dataModel/deployedAt"
                 uri-prefix: "https://projetobioma.pt/dataModel/"
                 model: https://schema.org/URL
                 type: Relationship
