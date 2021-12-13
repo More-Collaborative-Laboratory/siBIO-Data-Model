@@ -14,9 +14,9 @@ sensor:
 
 
     measurementVariable: 
-        description: Define variable sensor can measure
-            * `Water` - Water consumption measurement. Unit MTQ.
-            * `Energy` - Energy consumption measurement. Unit KWH.
+        description: Define the variable that the sensor can measure
+            * `Water` - Water consumption measurement
+            * `Energy` - Energy consumption measurement
         type: string
         enum: 
             - Water
@@ -29,7 +29,7 @@ sensor:
             type: Property
 
     measurementValue:
-      description: Measurement variable quantity consumed by a given asset, within a process
+      description: Measured variable quantity consumed by a given asset, within a process
       minimum: 0
       type: number
       x-ngsi:
