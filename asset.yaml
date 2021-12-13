@@ -22,7 +22,7 @@
             type: Property
 
         category: 
-          description: Asset type
+          description: Asset category
           type: string
           example: Transportation Vehicle
           x-ngsi:

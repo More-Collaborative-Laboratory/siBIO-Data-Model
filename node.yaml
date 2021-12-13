@@ -100,7 +100,7 @@ measurementNode:
             type: Property
 
         cpu:
-            description: Describe the CPU installed on the device
+            description: Describes the CPU installed on the device
             type: string
             example: ARM Cortex M4
             x-ngsi:
@@ -109,7 +109,7 @@ measurementNode:
                 type: Property
 
         gnss:
-            description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
+            description: Indicates the existence or absence of a GNSS receiver (GPS) installed or acessible by the device. 
             type: boolean
             example: true
             x-ngsi:
@@ -117,7 +117,7 @@ measurementNode:
                 uri-prefix: "https://projetobioma.pt/dataModel/"
                 type: Property                          
         rfid:
-            description: Indicates the existence of absence of an RFID identification tag. 
+            description: Indicates the existence or absence of an RFID identification tag. 
             type: boolean
             example: false
             x-ngsi:
@@ -137,7 +137,7 @@ measurementNode:
                 type: Property                                  
 
         rssi:
-            description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
+            description: Indicates the value of the RSSI (in dBm) of available wireless transceivers.
             type: array
             items: {}
             #example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
