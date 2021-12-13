@@ -23,9 +23,8 @@ sensor:
             - Energy
         example: Energy
         x-ngsi:
-            uri: "https://projetobioma.pt/dataModel/category"
+            uri: "https://projetobioma.pt/dataModel/measurementVariable"
             uri-prefix: "https://projetobioma.pt/dataModel/"
-            model: https://schema.org/category
             type: Property
 
     measurementValue:
