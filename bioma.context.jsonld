@@ -42,6 +42,10 @@
             "@id": "bioma:cpu",
             "@type": "xsd:string"
         },
+        "dataCategory": {
+            "@id": "bioma:dataCategory",
+            "@type": "xsd:string"
+        },
         "deployedAt": {
             "@id": "bioma:deployedAt",
             "@type": "@id"
