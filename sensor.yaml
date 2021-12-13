@@ -14,7 +14,7 @@ sensor:
 
 
     measurementVariable: 
-        description: Define the variable that the sensor can measure
+        description: Defines the variable that the sensor can measure
             * `Water` - Water consumption measurement
             * `Energy` - Energy consumption measurement
         type: string
