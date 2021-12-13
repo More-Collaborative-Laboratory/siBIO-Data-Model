@@ -3,7 +3,7 @@
         "type": "@type",
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "bioma": "https://projetobioma.pt/dataModel/",
+        "fiware": "https://projetobioma.pt/dataModel/",
         "schema": "https://schema.org/",
         "Asset": "bioma:Asset",
         "MeasurementNode": "bioma:MeasurementNode",
@@ -14,6 +14,7 @@
         "address": "schema:address",
         "addressCountry": "schema:addressCountry",
         "addressLocality": "schema:addressLocality",
+        "belongsTo": "bioma:belongsTo",
         "caeId": "bioma:caeId",
         "category": "bioma:category",
         "connectivity": "bioma:connectivity",
@@ -21,7 +22,6 @@
         "deployedAt": "bioma:operatedBy",
         "details": "bioma:details",
         "email": "schema:email",
-        "energyConsumption": "bioma:energyConsumption",
         "executedAt": "bioma:executedAt",
         "familyName": "schema:familyName",
         "firmware": "bioma:firmware",
@@ -30,6 +30,8 @@
         "gnss": "bioma:gnss",
         "legalName": "bioma:legalName",
         "location": "ngsi-ld:location",
+        "measurementValue": "bioma:measurementValue",
+        "measurementVariable": "bioma:measurementVariable",
         "name": "schema:name",
         "operatedBy": "bioma:operatedBy",
         "postalCode": "schema:postalCode",
@@ -41,7 +43,6 @@
         "taxId": "schema:taxID",
         "telephone": "schema:telephone",
         "usedIn": "bioma:usedIn",
-        "waterConsumption": "bioma:waterConsumption",
         "worksAt": "bioma:worksAt"
     }
 }
