@@ -56,3 +56,6 @@ sensor:
 
   required:
     - id
+    - measurementVariable
+    - measurementValue
+    
