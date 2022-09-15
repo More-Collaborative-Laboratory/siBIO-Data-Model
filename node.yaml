@@ -305,3 +305,4 @@ measurementNode:
 
     required:
         - id
+        - deployedAt

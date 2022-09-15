@@ -18,7 +18,7 @@
           x-ngsi:
             uri: "https://schema.org/givenName"
             uri-prefix: "https://schema.org/"
-            model: https://schema.org/Person
+            model: https://schema.org/givenName
             type: Property
             
         familyName: 
@@ -28,7 +28,7 @@
           x-ngsi:
             uri: "https://schema.org/familyName"
             uri-prefix: "https://schema.org/"
-            model: https://schema.org/Person
+            model: https://schema.org/familyName
             type: Property
             
         taxId:
@@ -39,7 +39,7 @@
           x-ngsi:
             uri: "https://schema.org/taxID"
             uri-prefix: "https://schema.org/"
-            model: https://schema.org/Person
+            model: https://schema.org/taxID
             type: Property
         
         ssnId:
@@ -50,7 +50,6 @@
           x-ngsi:
             uri: "https://projetobioma.pt/dataModel/ssnId"
             uri-prefix: "https://projetobioma.pt/dataModel/"
-            model: https://schema.org/Person
             type: Property
         
         functionPerformed:

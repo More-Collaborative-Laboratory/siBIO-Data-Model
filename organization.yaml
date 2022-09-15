@@ -16,8 +16,8 @@ organization:
       type: string
       example: BIOMA
       x-ngsi:
-        uri: "https://projetobioma.pt/dataModel/legalName"
-        uri-prefix: "https://projetobioma.pt/dataModel/"
+        uri: "https://schema.org/legalName"
+        uri-prefix: "https://schema.org/"
         model: https://schema.org/legalName
         type: Property
         

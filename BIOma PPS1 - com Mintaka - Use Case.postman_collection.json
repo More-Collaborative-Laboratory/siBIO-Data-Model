@@ -1,0 +1,1139 @@
+{
+	"info": {
+		"_postman_id": "25dd6bbb-b1c9-40b2-8643-3a8007dfb661",
+		"name": "BIOma PPS1 - com Mintaka - Use Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria entidade do tipo Organization",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Organization:FraoulaSA\",\r\n    \"type\": \"Organization\",\r\n    \"legalName\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Fraoula, S.A.\"\r\n    },\r\n    \"taxId\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"6000123456\"\r\n    },\r\n    \"ssnId\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"25665541125\"\r\n    },\r\n    \"caeId\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"123456789\"\r\n    },\r\n\r\n    \"address\": {\r\n        \"type\": \"Property\",\r\n        \"value\": {\r\n            \"streetAddress\": \"Lugar do Lameiro\",\r\n            \"postalCode\": \"0000-000\",\r\n            \"addressLocality\": \"Lameiro\",\r\n            \"addressCountry\": \"Portugal\"\r\n        }\r\n    },\r\n    \r\n    \"email\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"geral@fraoula.pt\"\r\n    },\r\n\r\n    \"telephone\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"000 123 456\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apaga Organização",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld>",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities/urn:ngsi-ld:Organization:001",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						"urn:ngsi-ld:Organization:001"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Process - Produção",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Process:ProducaoX\",\r\n    \"type\": \"Process\",\r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Produção de Morangos\"\r\n    },\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Descrição do processo relativo à produção de morangos.\"\r\n    },\r\n\r\n   \"executedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Organization:FraoulaSA\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Process - ArmazenamentoX",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Process:ArmazenamentoX\",\r\n    \"type\": \"Process\",\r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Armazenamento de Morangos\"\r\n    },\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Descrição do processo de armazenamento de morangos.\"\r\n    },\r\n\r\n   \"executedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Organization:FraoulaSA\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Process - TransporteX",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Process:TransporteX\",\r\n    \"type\": \"Process\",\r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Transporte de Morangos\"\r\n    },\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Descrição do processo de transporte dos morangos.\"\r\n    },\r\n\r\n   \"executedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Organization:FraoulaSA\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Asset para o processo de Produção",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:Asset:Unidade001\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Unidade de produção 1\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Estufas\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"500 m2\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:ProducaoX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:Asset:Unidade002\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Unidade de produção 2\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Estufas\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"500 m2\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:ProducaoX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:Asset:Unidade003\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Unidade de produção 3\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Estufas\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"600 m2\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:ProducaoX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Asset:TratorX\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"AP-RX-KK\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Veículo\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Marca, 3500 kg, diesel\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:ProducaoX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Asset para o processo de Armazenamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Asset:PainelSolarX\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Sistema de produção de energia fotovoltaica\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Equipamento\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"x kWh\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:ArmazenamentoX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Asset para o processo de Transporte",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Asset:CamiaoX\",\r\n    \"type\": \"Asset\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Camião\"\r\n    },\r\n\r\n    \"category\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Veículo\"\r\n    },\r\n\r\n    \"details\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Camião usado no transporte de morangos para retalho.\"\r\n    },\r\n\r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n    \r\n   \"usedIn\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Process:TransporteX\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entities",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "options",
+							"value": "keyValues",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo MeasurementNode para o Asset Unidade001",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao001\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 1\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 1 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade001\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao002\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 2\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 2 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade001\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao003\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 3\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 3 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade001\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo MeasurementNode para o Asset Unidade002",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao004\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 4\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 4 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade002\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao005\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 5\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 5 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade002\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao006\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 6\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 6 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade002\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo MeasurementNode para o Asset Unidade003",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao007\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 7\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 7 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade003\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao008\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 8\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 8 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade003\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n\r\n{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:NoMedicao009\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 9\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 9 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Automatic\"\r\n    },\r\n\r\n    \"software\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Baremetal\"\r\n    },\r\n  \r\n    \"firmware\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"1.0.0\"\r\n    },\r\n  \r\n    \"cpu\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"ATTINY85\"\r\n    }, \r\n    \r\n    \"gnss\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    }, \r\n          \r\n    \"rfid\":{\r\n        \"type\": \"Property\",\r\n        \"value\": false\r\n    },  \r\n  \r\n    \"connectivity\":{\r\n        \"type\": \"Property\",\r\n        \"value\": [\"LoRa\"]\r\n    },\r\n  \r\n    \"rssi\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 0,\r\n        \"unitCode\": \"DBM\",\r\n        \"observedAt\": \"2022-01-01T00:00:00Z\"\r\n    },\r\n    \r\n    \"location\": {\r\n        \"type\": \"GeoProperty\",\r\n        \"value\": {\r\n             \"type\": \"Point\",\r\n             \"coordinates\": [41.796391953113876, -6.768110546834977]\r\n        }\r\n    },\r\n\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade003\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Sensor para as entidades MeasurementNode da Unidade001",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro001\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro002\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao002\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Wattimetro001\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Energy\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"KWH\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao003\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Sensor para as entidades MeasurementNode da Unidade002",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro003\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao004\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro004\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao005\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Wattimetro002\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Energy\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"KWH\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao006\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidades do tipo Sensor para as entidades MeasurementNode da Unidade003",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld>;type=\"application/ld+json\"",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro005\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao007\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Caudalimetro006\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Water\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"E32\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao008\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n},\r\n{\r\n    \"id\": \"urn:ngsi-ld:Sensor:Wattimetro003\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Energy\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 1,\r\n        \"unitCode\": \"KWH\",\r\n        \"observedAt\": \"2021-12-21T17:12:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:NoMedicao009\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://193.136.195.105:1026/ngsi-ld/v1/entityOperations/upsert",
+					"protocol": "http",
+					"host": [
+						"193",
+						"136",
+						"195",
+						"105"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entityOperations",
+						"upsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo MeasurementNode para medição manual (combustível consumido pelo TratorX)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:Manual001\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 10\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 10 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Manual\"\r\n    },\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:TratorX\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Sensor - envio de leituras manuais (fuel consumido)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Sensor:ManualReading001\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Fuel\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 20,\r\n        \"unitCode\": \"DMQ\",\r\n        \"observedAt\": \"2021-12-10T00:00:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:Manual001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo MeasurementNode para medição manual (unidades produzidas na Unidade 1)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:MeasurementNode:Manual002\",\r\n    \"type\": \"MeasurementNode\",\r\n  \r\n    \"name\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 10\"\r\n    },\r\n\r\n    \"details\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Measurement Node 10 characteristics\"\r\n    },\r\n\r\n    \"dataCategory\":{\r\n        \"type\": \"Property\",\r\n        \"value\": \"Manual\"\r\n    },\r\n   \"deployedAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Asset:Unidade001\"\r\n   },\r\n   \"operatedBy\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Worker:001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Sensor - envio de leituras manuais",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Sensor:ManualReading001\",\r\n    \"type\": \"Sensor\",\r\n  \r\n    \"measurementVariable\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"ProducedUnits\"\r\n      },\r\n\r\n    \"measurementValue\": {\r\n        \"type\": \"Property\",\r\n        \"value\": 20000,\r\n        \"unitCode\": \"EA\",\r\n        \"observedAt\": \"2021-12-10T00:00:00Z\"\r\n      },\r\n\r\n   \"belongsTo\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:MeasurementNode:Manual001\"\r\n   },\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria entidade do tipo Worker (001)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Fiware-ServicePath",
+						"value": "/",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Fiware-Service",
+						"value": "bioma",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "NGSILD-Tenant",
+						"value": "openiot",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Worker:001\",\r\n    \"type\": \"Worker\",\r\n  \r\n    \"givenName\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Manuel\"\r\n      },\r\n    \"familyName\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Rodrigues\"\r\n      },\r\n    \"taxId\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"254545879\"\r\n      },\r\n    \"ssnId\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"12345678901\"\r\n      },\r\n    \"functionPerformed\": {\r\n        \"type\": \"Property\",\r\n        \"value\": \"Driver\"\r\n      },\r\n    \"worksAt\": {\r\n        \"type\": \"Relationship\",\r\n        \"object\": \"urn:ngsi-ld:Organization:FraoulaSA\"\r\n      },\r\n\r\n\r\n\r\n    \"@context\": [\r\n        \"https://raw.githubusercontent.com/More-Collaborative-Laboratory/siBIO-Data-Model/master/bioma.context-ngsi-ld.jsonld\",\r\n        \"https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.3.jsonld\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1026/ngsi-ld/v1/entities/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1026",
+					"path": [
+						"ngsi-ld",
+						"v1",
+						"entities",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
