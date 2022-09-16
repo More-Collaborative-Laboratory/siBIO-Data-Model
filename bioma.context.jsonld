@@ -83,7 +83,7 @@
             "@type": "xsd:boolean"
         },
         "legalName": {
-            "@id": "bioma:legalName",
+            "@id": "schema:legalName",
             "@type": "xsd:string"
         },
         "location": {
@@ -279,7 +279,7 @@
             ]
         },
         {
-            "@id": "bioma:legalName",
+            "@id": "schema:legalName",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -524,7 +524,7 @@
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "Asset type"
+                    "@value": "Asset category"
                 }
             ],
             "rdfs:label": [
@@ -700,7 +700,7 @@
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "Describe the CPU installed on the device"
+                    "@value": "Describes the CPU installed on the device"
                 }
             ],
             "rdfs:label": [
@@ -716,7 +716,7 @@
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device."
+                    "@value": "Indicates the existence or absence of a GNSS receiver (GPS) installed or acessible by the device."
                 }
             ],
             "rdfs:label": [
@@ -732,7 +732,7 @@
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "Indicates the existence of absence of an RFID identification tag."
+                    "@value": "Indicates the existence or absence of an RFID identification tag."
                 }
             ],
             "rdfs:label": [
@@ -764,7 +764,7 @@
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "Indicate the value of the RSSI (in dBm) of available wireless transceivers."
+                    "@value": "Indicates the value of the RSSI (in dBm) of available wireless transceivers."
                 }
             ],
             "rdfs:label": [

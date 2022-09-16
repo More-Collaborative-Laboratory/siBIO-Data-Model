@@ -29,7 +29,7 @@
         "functionPerformed": "bioma:functionPerformed",
         "givenName": "schema:givenName",
         "gnss": "bioma:gnss",
-        "legalName": "bioma:legalName",
+        "legalName": "schema:legalName",
         "location": "ngsi-ld:location",
         "measurementValue": "bioma:measurementValue",
         "measurementVariable": "bioma:measurementVariable",
